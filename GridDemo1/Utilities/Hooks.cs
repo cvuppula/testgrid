@@ -247,8 +247,9 @@ namespace GridDemo1.Utilities
 
             switch (browserType)
             {
-                case "chrome1":
+                case "chrome":
                 case "CHROME":
+                case "Chrome":
                     ChromeOptions option = new ChromeOptions();
                     //option.AddArgument("--headless");
                     _webDriver = new ChromeDriver(option);
@@ -258,6 +259,8 @@ namespace GridDemo1.Utilities
                 case "ff":
                 case "FIREFOX":
                 case "Firefox":
+                case "Fire Fox":
+                case "Fire fox":
                     /*var driverDir = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                     FirefoxDriverService service = FirefoxDriverService.CreateDefaultService(driverDir, "geckodriver.exe");
                     service.FirefoxBinaryPath = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
@@ -278,10 +281,11 @@ namespace GridDemo1.Utilities
                     break;
 
                 default:
-                    ChromeOptions options = new ChromeOptions();
+                    /*ChromeOptions options = new ChromeOptions();
                     //options.AddArgument("--headless");
                     _webDriver = new ChromeDriver(options);
-                    break;
+                    break; */
+                    throw new NotSupportedException($"{browserType} is not a supported browser. Please provide valid browser");
             }
 
             Thread.Sleep(2000);

@@ -16,7 +16,6 @@ namespace GridDemo1.StepDefinitions
     {
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
-        private readonly ScenarioContext context;
         private readonly IWebDriver webDriver;
         readonly WebDriverHelper Driver;
 
@@ -54,7 +53,7 @@ namespace GridDemo1.StepDefinitions
         [Given(@"I navigate to Home page")]
         public void GivenINavigateToHomePage()
         {
-            Driver.Navigate("https://enterpriseweb.dev.cndt.tk/home");
+            Driver.Navigate("https://enterpriseweb.dev.cndt.cf/home");
         }
 
         [When(@"I add a customer with below data")]

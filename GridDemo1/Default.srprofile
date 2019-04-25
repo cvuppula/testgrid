@@ -43,7 +43,7 @@
     <!--<Target name="IE">
       <Filter>Browser_IE</Filter>
     </Target>-->
-    <Target name="Chrome1">
+    <Target name="Chrome">
       <Filter>Browser_Chrome</Filter>
     </Target>
     <Target name="Firefox">
